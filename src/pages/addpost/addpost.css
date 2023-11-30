@@ -1,0 +1,99 @@
+.form-section{
+    padding-top: 20px;
+}
+.form-section h2{
+    max-width: 550px;
+    margin: auto;
+    color:#333;
+    text-align: center;
+    padding: 20px 0px;
+    text-transform: uppercase;
+}
+.add-form{
+    max-width: 550px;
+    margin: auto;
+    border-radius: 5px;
+    background:#fff;
+    padding: 20px;
+}
+.inputfield-div{
+    margin: 15px 0px;
+}
+.inputfield-div label{
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    display: block;
+}
+.inputfield{
+    width: 100%;
+    padding:12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.inputfield:focus, .textarea:focus{
+    outline:none;
+    border: 1px solid rgb(79, 172, 201);
+}
+.textarea{
+    width: 100%;
+    padding:12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.form-btn{
+    width: 100%;
+    background: rgb(79, 172, 201);
+    color:#fff;
+    margin: 10px 0;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor:pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.4s all ease;
+}
+.submitting{
+    background: rgb(87, 167, 192);
+    pointer-events: none;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.form-btn:hover{
+    background: rgba(79, 172, 201, 0.582);
+}
+.clear{
+    background: rgb(247, 27, 27);
+}
+.clear:hover{
+    background:  rgba(247, 27, 27, 0.404);
+}
+.contentlisting{
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+}
+.second-division{
+    display: flex;
+    justify-content: space-between;
+}
+.second-division button{
+    padding: 10px;
+}
+.ql-editor{
+    min-height: 250px;
+}
+.ql-editor:focus{
+    outline:none;
+    border: 1px solid rgb(79, 172, 201);
+}

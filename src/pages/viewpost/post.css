@@ -1,0 +1,234 @@
+.postContainer{
+  margin: 60px 40px;
+}
+.scroll-container {
+  overflow: auto;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.scroll {
+  margin: 0;
+  width: 100%;
+}
+.scroll td:first-of-type {
+  position: sticky;
+  left: 0;
+}
+.scroll td:first-of-type &:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1px;
+  height: 100%;
+  width: 1px;
+  z-index: 10;
+}
+td:last-of-type {
+  border-right: none;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+th{
+  color: #333;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 20px 5px;
+}
+tr:nth-child(even) {
+  background-color: rgba(161, 161, 161, 0.151)!important;
+}
+
+table{
+  width: 100%
+}
+
+.post-topic{
+  max-width: 400px;
+  line-height: 30px;
+  text-align: justify;
+}
+.serial{
+  width: 5%;
+}
+.name{
+  width: 20%;
+  font-weight: 600;
+}
+.post-topic{
+  width: 30%
+}
+.category, .comment{
+  width: 10%;
+}
+.date{
+  width: 12%
+}
+.action{
+  width: 15%
+}
+td{
+  color: #2c2b2b!important;
+}
+.name{
+  text-transform: capitalize;
+}
+.counter{
+  text-align: center
+}
+.edit{
+  padding: 5px 25px;
+  text-transform: uppercase;
+  background: rgba(184, 181, 181, 0.658);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: o.4s all ease;
+}
+.tableAction{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+ 
+}
+.edit:hover{
+  background:  rgba(184, 181, 181, 0.199);
+}
+.delete{
+  padding: 5px 20px;
+  text-transform: uppercase;
+  background: rgba(230, 95, 95, 0.658);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: o.4s all ease;
+  border-radius: 4px;
+}
+.delete:hover{
+  background: rgba(230, 95, 95, 0.281);
+}
+
+.popupContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(233.49deg, rgba(0, 0, 0, 0.733) -31.2%, rgba(0, 0, 0, 0.459) 110.78%);
+  z-index: 999;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  padding: 0px;
+}
+.messageStatusBody{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff!important;
+  width: 350px;
+  height: 180px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 30px 10px;
+}
+.messageStatusBody .image{
+  position: absolute;
+  top: -30px;
+  left:0;
+  right:0;
+  background: #e0dddd;
+  width: 100%;
+  width: 60px;
+  height:60px;
+  border-radius: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.messageStatusBody .image .icon{
+  font-size: 30px;
+  border-radius: 50%;
+}
+.messageStatusBody .text{
+  font-family: var(--textFamily);
+  color: var(--blackColor);
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+.messageStatusBody .text .span{
+  /* font-weight: 500; */
+  font-size: 13px;
+  display: block;
+}
+.messageStatusBody .popaction{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.messageStatusBody .popaction .span{
+  width: 55px;
+  background: gray;
+  height: 30px!important;
+  border-radius: 10px!important;
+  color: #fff!important;
+  display: flex;
+  align-items: center!important;
+  justify-content: center!important;
+  font-family: var(--textFamily)!important;
+  font-weight: 600;
+  font-size: 13px!important;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.messageStatusBody .popaction .delete{
+  background: rgba(255, 0, 0, 0.76)!important;
+}
+
+/* post pagination starts here */
+.paginationBttns {
+  width: 100%;
+  height: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.paginationBttns a {
+  padding: 7px;
+  margin: 4px;
+  border-radius: 5px;
+  background: rgb(173, 173, 173);
+  text-decoration: none;
+  color: var(--blackColor);
+  font-family: var(--textFamily);
+  cursor: pointer;
+  transition: 0.4s all ease;
+  font-size: 16px;
+  font-weight: 500
+}
+
+.paginationBttns a:hover {
+  background: rgb(79, 172, 201);
+  color: #fff!important;
+}
+
+.paginationActive a {
+  background: rgb(79, 172, 201);
+  color: #fff!important;
+}

@@ -1,0 +1,26 @@
+.authentication{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.authentication .inputfield-div{
+    position: relative;
+    width: 100%;
+}
+.authentication .eye{
+    position: absolute;
+    bottom: 19px;
+    right: 10px;
+}
+.authentication .eye .icon{
+    font-size: 22px;
+    cursor: pointer;
+    color: #f85a5a;
+}
+.authentication button{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%
+}
