@@ -37,10 +37,20 @@ function Addpost({ currentId, setCurrentId, posts }) {
 
     const dispatch = useDispatch();
     const handleChange = (ev) => {
-        setValues({
-            ...values,
-            [ev.target.name]: ev.target.value,
-        });
+       console.log("TARGET", ev.target.name)
+        console.log("TARGET33", ev.target.value)
+        if (ev.target.name === "topic") {
+
+            setValues({
+                ...values,
+                [ev.target.name]: ev.target.value.replace(/[^a-z0-9' ]/gi, ""),
+            });
+        } else {
+            setValues({
+                ...values,
+                [ev.target.name]: ev.target.value,
+            });
+        }
     };
     const handleQuillEdit = (value) => {
         setValues((prev) => {
