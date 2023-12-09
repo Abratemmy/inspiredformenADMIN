@@ -52,6 +52,10 @@ function Addpost({ currentId, setCurrentId, posts }) {
             });
         }
     };
+
+     const checkTopicLast = (values.topic.slice(-1) === "," || values.topic.slice(-1) === "'" || values.topic.slice(-1) === ":" || values.topic.slice(-1) === ".") ?
+        values.topic.slice(0, -1) : values.topic
+    
     const handleQuillEdit = (value) => {
         setValues((prev) => {
             return {
@@ -76,13 +80,22 @@ function Addpost({ currentId, setCurrentId, posts }) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+        const payload = {
+            topic: checkTopicLast,
+            postername: values.postername,
+            category: values.category,
+            image: values.image,
+            video: values.video,
+            message: values.message,
+        }
+
         if (currentId) {
-            dispatch(updatePost(currentId, values, setLoading, clear));
+            dispatch(updatePost(currentId, payload, setLoading, clear));
             // alert("Post updated successfully. Refresh your browser to view post")
             // clear()
         } else {
             setLoading(true)
-            dispatch(createPost(values, setLoading, clear))
+            dispatch(createPost(payload, setLoading, clear))
             setLoading(false)
             alert("Post created successfully. Refresh your browser to view post")
             clear()
